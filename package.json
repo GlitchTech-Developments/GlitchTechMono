@@ -1,6 +1,6 @@
 {
-  "name": "glitch-tech-mono",
-  "version": "0.0.0",
+  "name": "glitchtech-mono",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",

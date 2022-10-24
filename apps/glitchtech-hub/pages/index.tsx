@@ -13,7 +13,7 @@ export function Index() {
           <div id="welcome">
             <h1>
               <span> Hello there, </span>
-              Welcome glitch-tech-hub 👋
+              Welcome glitchtech-hub 👋
             </h1>
           </div>
 

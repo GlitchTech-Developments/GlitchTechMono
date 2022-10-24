@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "glitch-tech-mono",
+  "npmScope": "glitchtech-mono",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -49,5 +49,5 @@
       }
     }
   },
-  "defaultProject": "glitch-tech-hub"
+  "defaultProject": "glitchtech-hub"
 }

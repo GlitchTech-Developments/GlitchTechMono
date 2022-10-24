@@ -12,7 +12,7 @@
       "rules": {
         "@next/next/no-html-link-for-pages": [
           "error",
-          "apps/glitch-tech-hub/pages"
+          "apps/glitchtech-hub/pages"
         ]
       }
     },
