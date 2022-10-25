@@ -36,9 +36,9 @@ yarn run test
 
 👤 **GlitchTech Developments**
 
--   Website: https://glitchtech.eu
--   Twitter: [@GlitchTechEU](https://twitter.com/GlitchTechEU)
--   Github: [@GlitchTech-Developments](https://github.com/GlitchTech-Developments)
+- Website: https://glitchtech.eu
+- Twitter: [@GlitchTechEU](https://twitter.com/GlitchTechEU)
+- Github: [@GlitchTech-Developments](https://github.com/GlitchTech-Developments)
 
 ## 🤝 Contributing
 
