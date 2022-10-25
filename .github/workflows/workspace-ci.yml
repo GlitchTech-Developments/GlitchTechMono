@@ -1,22 +1,42 @@
-name: WorkspaceCI
+name: CI
+
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+    push:
+        branches: ["main"]
+    pull_request:
+        types: [opened, synchronize]
 
 jobs:
-  main:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v3
-      - run: yarn install --frozen-lockfile
+    build:
+        name: Build and Test
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        # To use Remote Caching, uncomment the next lines and follow the steps below.
+        # env:
+        #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+        #  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
-      - run: yarn nx workspace-lint
-      - run: yarn nx format:check
-      - run: yarn nx affected --target=lint --parallel=3
-      - run: yarn nx affected --target=test --parallel=3 --ci --code-coverage
-      - run: yarn nx affected --target=build --parallel=3
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 2
+
+            - uses: pnpm/action-setup@v2.0.1
+              with:
+                  version: 6.32.2
+
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+                  cache: "pnpm"
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Build
+              run: pnpm build
+
+            - name: Test
+              run: pnpm test

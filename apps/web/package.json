@@ -1,0 +1,27 @@
+{
+	"name": "web",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"next": "13.0.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"glitchtech-ui": "workspace:*"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.19.6",
+		"eslint-config-custom": "workspace:*",
+		"eslint": "8.26.0",
+		"next-transpile-modules": "9.1.0",
+		"tsconfig": "workspace:*",
+		"@types/node": "^18.11.5",
+		"@types/react": "18.0.17",
+		"typescript": "^4.8.4"
+	}
+}
