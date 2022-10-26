@@ -15,7 +15,7 @@ importers:
 
   apps/web:
     specifiers:
-      "@types/node": 18.11.5
+      "@types/node": 18.11.6
       "@types/react": 18.0.23
       "@types/react-dom": 18.0.7
       eslint: 8.26.0
@@ -29,7 +29,7 @@ importers:
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
-      "@types/node": 18.11.5
+      "@types/node": 18.11.6
       "@types/react": 18.0.23
       "@types/react-dom": 18.0.7
       eslint: 8.26.0
@@ -418,10 +418,10 @@ packages:
       }
     dev: true
 
-  /@types/node/18.11.5:
+  /@types/node/18.11.6:
     resolution:
       {
-        integrity: sha512-3JRwhbjI+cHLAkUorhf8RnqUbFXajvzX4q6fMn5JwkgtuwfYtRQYI3u4V92vI6NJuTsbBQWWh3RZjFsuevyMGQ==,
+        integrity: sha512-j3CEDa2vd96K0AXF8Wur7UucACvnjkk8hYyQAHhUNciabZLDl9nfAEVUSwmh245OOZV15bRA3Y590Gi5jUcDJg==,
       }
     dev: true
 
