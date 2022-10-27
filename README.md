@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> MonoRepo of internal project under development by GlitchTech Developments
+> TurboRepo template by GlitchTech Developments
 
 ## Install
 
