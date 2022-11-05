@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:static": "next build && next export",
-    "lint": "next lint",
-    "server:start": "node server.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@nextui-org/react": "1.0.0-beta.10",
