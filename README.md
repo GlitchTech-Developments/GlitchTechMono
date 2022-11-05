@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> TurboRepo template by GlitchTech Developments
+> TurboRepo used by GlitchTech Developments
 
 ## Install
 
