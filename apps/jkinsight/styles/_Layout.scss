@@ -1,0 +1,113 @@
+.container {
+  background-color: #000;
+  color: #fff;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+  z-index: 500;
+
+  a {
+    color: #8f0;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.Link:hover,
+.Link:focus,
+.Link:active {
+  color: #8f0;
+  border-color: #8f0;
+}
+
+.title {
+  font-size: 58px !important;
+}
+
+@media (max-width: 600px) {
+  .loader {
+    margin: 0px;
+    align-content: center;
+    padding-bottom: 12vh;
+  }
+}
+
+.footer {
+  z-index: 500;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+
+  .branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  a:hover {
+    color: #8f0;
+    text-decoration: underline;
+  }
+}
+
+.loadingscreen {
+  overflow: hidden;
+  background-color: #000;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh + 5rem);
+  position: absolute;
+  display: flex;
+
+  .loader {
+    --nextui--loadingColor: #8f0;
+    margin: auto;
+  }
+}
+
+.MainLoading {
+  overflow: hidden;
+}
+
+.MainLoaded {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.loaded {
+  margin: auto;
+  animation: fadeOut 0.25s forwards;
+  animation-delay: 0.25s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

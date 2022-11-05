@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://hardwarehulp.nl
+
+# Sitemaps
+Sitemap: https://hardwarehulp.nl/sitemap.xml

@@ -1,0 +1,88 @@
+// Globals
+@import "_Root.scss";
+@import "_Layout.scss";
+
+// Parts
+@import "parts/_Scrollbar.scss";
+@import "parts/Cards.scss";
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+
+  .title-h1 {
+    color: #8f0;
+    font-size: 3.5rem;
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+  }
+}
+
+.sub-title {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.typed-text-div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  width: 500px;
+  text-align: center;
+
+  strong {
+    font-size: 1.5rem;
+  }
+
+  .typed-text {
+    color: #8f0;
+  }
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin-top: 2rem;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.desc-hr {
+  width: 10rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.code {
+  background: #000;
+  color: #8f0;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
