@@ -11,9 +11,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         titleTemplate="%s | Protest Protocol"
         defaultTitle="Loading..."
         description="I am Protest Protocol, a 20 year old Drum and Bass producer from the Netherlands."
-        canonical="https://www.protestprotocol.eu"
+        canonical="https://www.protest-protocol.glitchtech.eu"
         openGraph={{
-          url: "https://protestprotocol.eu",
+          url: "https://protest-protocol.glitchtech.eu",
           title: "Protest Protocol",
           description:
             "I am Protest Protocol, a 20 year old Drum and Bass producer from the Netherlands.",
