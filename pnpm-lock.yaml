@@ -24,17 +24,21 @@ importers:
       eslint: 8.22.0
       eslint-config-next: 12.3.1
       next: 13.0.2
+      next-seo: 5.14.0
       postcss: ^8.4.14
       prettier: ^2.7.1
       prettier-plugin-tailwindcss: ^0.1.13
       react: 18.2.0
       react-dom: 18.2.0
+      sass: ^1.56.0
       tailwindcss: ^3.1.6
       typescript: ^4.8.4
     dependencies:
-      next: 13.0.2_biqbaboplfbrettd7655fr4n2y
+      next: 13.0.2_orpxj3vgaelozwpc7iiuainqz4
+      next-seo: 5.14.0_pknogjuzx4bv7zxtatcb2ahtsq
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      sass: 1.56.0
     devDependencies:
       "@types/node": 18.0.0
       "@types/react": 18.0.14
@@ -5021,54 +5025,6 @@ packages:
       "@next/swc-win32-arm64-msvc": 12.3.2
       "@next/swc-win32-ia32-msvc": 12.3.2
       "@next/swc-win32-x64-msvc": 12.3.2
-    transitivePeerDependencies:
-      - "@babel/core"
-      - babel-plugin-macros
-    dev: false
-
-  /next/13.0.2_biqbaboplfbrettd7655fr4n2y:
-    resolution:
-      {
-        integrity: sha512-uQ5z5e4D9mOe8+upy6bQdYYjo/kk1v3jMW87kTy2TgAyAsEO+CkwRnMgyZ4JoHEnhPZLHwh7dk0XymRNLe1gFw==,
-      }
-    engines: { node: ">=14.6.0" }
-    hasBin: true
-    peerDependencies:
-      fibers: ">= 3.1.0"
-      node-sass: ^6.0.0 || ^7.0.0
-      react: ^18.2.0
-      react-dom: ^18.2.0
-      sass: ^1.3.0
-    peerDependenciesMeta:
-      fibers:
-        optional: true
-      node-sass:
-        optional: true
-      sass:
-        optional: true
-    dependencies:
-      "@next/env": 13.0.2
-      "@swc/helpers": 0.4.11
-      caniuse-lite: 1.0.30001425
-      postcss: 8.4.14
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      styled-jsx: 5.1.0_react@18.2.0
-      use-sync-external-store: 1.2.0_react@18.2.0
-    optionalDependencies:
-      "@next/swc-android-arm-eabi": 13.0.2
-      "@next/swc-android-arm64": 13.0.2
-      "@next/swc-darwin-arm64": 13.0.2
-      "@next/swc-darwin-x64": 13.0.2
-      "@next/swc-freebsd-x64": 13.0.2
-      "@next/swc-linux-arm-gnueabihf": 13.0.2
-      "@next/swc-linux-arm64-gnu": 13.0.2
-      "@next/swc-linux-arm64-musl": 13.0.2
-      "@next/swc-linux-x64-gnu": 13.0.2
-      "@next/swc-linux-x64-musl": 13.0.2
-      "@next/swc-win32-arm64-msvc": 13.0.2
-      "@next/swc-win32-ia32-msvc": 13.0.2
-      "@next/swc-win32-x64-msvc": 13.0.2
     transitivePeerDependencies:
       - "@babel/core"
       - babel-plugin-macros
