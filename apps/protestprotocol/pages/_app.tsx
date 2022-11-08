@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             "I am Protest Protocol, a 20 year old Drum and Bass producer from the Netherlands.",
           images: [
             {
-              url: "/ProtestProtocol.jpg",
+              url: "/ProtestProtocol.webp",
               width: 800,
               height: 600,
               alt: "Protest Protocol, Drum and Bass brought to you from the Netherlands.",
