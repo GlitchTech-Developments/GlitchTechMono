@@ -18,7 +18,8 @@
     "react": "npm:@preact/compat@17.1.2",
     "react-dom": "npm:@preact/compat@17.1.2",
     "react-icons": "^4.6.0",
-    "react-ssr-prepass": "npm:preact-ssr-prepass@1.2.0"
+    "react-ssr-prepass": "npm:preact-ssr-prepass@1.2.0",
+    "preact-ssr-prepass": "1.2.0"
   },
   "devDependencies": {
     "@types/node": "18.11.9",
