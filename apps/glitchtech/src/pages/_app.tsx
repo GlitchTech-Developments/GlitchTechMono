@@ -1,12 +1,26 @@
 import "../styles/globals.scss";
-// import { useEffect, useRef, useState } from "react";
 
 import type { AppProps } from "next/app";
+import dynamic from "next/dynamic";
 import { NextSeo } from "next-seo";
+import { useEffect } from "react";
 
-function MyApp({ Component, pageProps }: AppProps) {
+import Theme from "../components/providers/Theme";
+const Header = dynamic(() => import("../components/layout/Header"), {
+  ssr: false,
+});
+
+function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    const subscribe = async () => await Theme();
+
+    return () => {
+      subscribe();
+    };
+  }, []);
+
   return (
-    <div className="bg-black">
+    <div className="dark:bg-black">
       <NextSeo
         titleTemplate="%s | GlitchTech Developments"
         defaultTitle="Loading..."
@@ -34,9 +48,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           cardType: "summary_large_image",
         }}
       />
+      <Header />
       <Component {...pageProps} />
     </div>
   );
 }
 
-export default MyApp;
+export default App;
