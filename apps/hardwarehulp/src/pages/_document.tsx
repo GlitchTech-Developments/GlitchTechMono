@@ -20,7 +20,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="nl-NL">
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+        </Head>
         <NextSeo
           titleTemplate="%s | HardwareHulp - IT hulp aan huis in Kampen, Overijssel"
           defaultTitle="Loading..."
