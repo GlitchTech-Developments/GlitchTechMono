@@ -1,6 +1,7 @@
 # *
 User-agent: *
 Allow: /
+Disallow: /tools
 
 # Host
 Host: https://hardwarehulp.nl

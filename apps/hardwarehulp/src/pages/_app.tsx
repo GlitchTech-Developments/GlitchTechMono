@@ -23,7 +23,7 @@ const App: AppType = ({ Component, pageProps }) => {
             "IT gerelateerde hulp aan huis in Kampen, Overijssel. Computers gebouwd op maat, technische ondersteuning en meer! Neem contact op!",
           images: [
             {
-              url: "/images/logo-og.png",
+              url: "/img/logo-og.webp",
               width: 800,
               height: 600,
               alt: "HardwareHulp - IT gerelateerde ondersteuning op software en hardware vlak.",
