@@ -3,14 +3,10 @@ import type { AppType } from "next/dist/shared/lib/utils"
 import { NextSeo } from "next-seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Head from "next/head"
 
 const App: AppType = ({ Component, pageProps }) => {
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
       <NextSeo
         titleTemplate="%s | HardwareHulp - IT hulp aan huis in Kampen, Overijssel"
         defaultTitle="Loading..."
