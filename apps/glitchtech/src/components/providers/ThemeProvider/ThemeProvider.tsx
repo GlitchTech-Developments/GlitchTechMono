@@ -13,33 +13,33 @@ const ThemeProvider = (props: any) => {
 
   useEffect(() => {
     if (localStorage.getItem("color-theme")) {
-      if (localStorage.getItem("color-theme") === "light") {
+      if (localStorage.getItem("color-theme") === "dark") {
         document.documentElement.classList.add("dark");
         localStorage.setItem("color-theme", "dark");
-        setDarkModeEnabled(false);
+        setDarkModeEnabled(true);
       } else {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("color-theme", "light");
-        setDarkModeEnabled(true);
+        setDarkModeEnabled(false);
       }
 
       // if NOT set via local storage previously
     } else {
-      if (document.documentElement.classList.contains("dark")) {
+      if (document.documentElement.classList.contains("light")) {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("color-theme", "light");
-        setDarkModeEnabled(true);
+        setDarkModeEnabled(false);
       } else {
         document.documentElement.classList.add("dark");
         localStorage.setItem("color-theme", "dark");
-        setDarkModeEnabled(false);
+        setDarkModeEnabled(true);
       }
     }
   }, []);
 
   const ThemeToggle = () => {
     setDarkModeEnabled(!DarkModeEnabled);
-    if (DarkModeEnabled == false) {
+    if (DarkModeEnabled == true) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("color-theme", "light");
     } else {
@@ -54,11 +54,10 @@ const ThemeProvider = (props: any) => {
         <button
           id="theme-toggle"
           type="button"
-          className="rounded-lg bg-gray-500 p-2.5 text-sm"
+          className="rounded-lg bg-black p-2 text-sm text-white dark:bg-gray-800"
           onClick={ThemeToggle}
         >
-          <ThemeToggleDarkIcon />
-          <ThemeToggleLightIcon />
+          {DarkModeEnabled ? <ThemeToggleDarkIcon /> : <ThemeToggleLightIcon />}
         </button>
       </>
     );
