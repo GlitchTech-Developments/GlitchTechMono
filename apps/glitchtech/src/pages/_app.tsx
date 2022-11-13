@@ -3,31 +3,26 @@ import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import dynamic from "next/dynamic";
 import { NextSeo } from "next-seo";
-import { useEffect } from "react";
 
-import Theme from "../components/providers/Theme";
 const Header = dynamic(() => import("../components/layout/Header"), {
   ssr: false,
 });
 
+const ThemeProvider = dynamic(
+  () => import("../components/providers/ThemeProvider/ThemeProvider"),
+  { ssr: false }
+);
+
 function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    const subscribe = async () => await Theme();
-
-    return () => {
-      subscribe();
-    };
-  }, []);
-
   return (
-    <div className="dark:bg-black">
+    <ThemeProvider>
       <NextSeo
         titleTemplate="%s | GlitchTech Developments"
         defaultTitle="Loading..."
         description="At GlitchTech Developments we work on web, app, software and game projects. We are located in the Netherlands."
-        canonical="https://www.protest-protocol.glitchtech.eu"
+        canonical="https://www.glitchtech.eu"
         openGraph={{
-          url: "https://protest-protocol.glitchtech.eu",
+          url: "https://glitchtech.eu",
           title: "GlitchTech Developments",
           description:
             "At GlitchTech Developments we work on web, app, software and game projects. We are located in the Netherlands.",
@@ -50,7 +45,7 @@ function App({ Component, pageProps }: AppProps) {
       />
       <Header />
       <Component {...pageProps} />
-    </div>
+    </ThemeProvider>
   );
 }
 
