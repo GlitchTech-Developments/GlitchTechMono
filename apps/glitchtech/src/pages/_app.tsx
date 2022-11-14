@@ -5,9 +5,7 @@ import dynamic from "next/dynamic";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 
-const Header = dynamic(() => import("../components/layout/Header"), {
-  ssr: false,
-});
+import Header from "../components/layout/Header";
 
 const ThemeProvider = dynamic(
   () => import("../components/providers/ThemeProvider/ThemeProvider"),
