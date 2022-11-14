@@ -54,7 +54,7 @@ const ThemeProvider = (props: any) => {
         <button
           id="theme-toggle"
           type="button"
-          className="rounded-lg bg-black p-2 text-sm text-white dark:bg-gray-800"
+          className="btn rounded-lg  bg-black p-2 text-sm text-white"
           onClick={ThemeToggle}
         >
           {DarkModeEnabled ? <ThemeToggleDarkIcon /> : <ThemeToggleLightIcon />}
@@ -64,12 +64,13 @@ const ThemeProvider = (props: any) => {
   };
 
   const value = {
+    DarkModeEnabled,
     ThemeToggleButton,
   };
 
   return (
     <ThemeContext.Provider value={value}>
-      <div className="dark:bg-black">{props.children}</div>
+      <div className="bg-gray-600 dark:bg-black">{props.children}</div>
     </ThemeContext.Provider>
   );
 };

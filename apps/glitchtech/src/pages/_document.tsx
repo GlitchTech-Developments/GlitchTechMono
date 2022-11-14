@@ -7,6 +7,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
+import Favicons from "../components/layout/Favicons";
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -19,8 +20,12 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
-        <Head />
+      <Html lang="en-US">
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charSet="UTF-8" />
+          <Favicons />
+        </Head>
         <NextSeo
           titleTemplate="%s | GlitchTech Developments"
           defaultTitle="Loading..."
