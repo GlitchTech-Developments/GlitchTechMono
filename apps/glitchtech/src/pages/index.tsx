@@ -1,19 +1,19 @@
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
+import PageWrapper from "../components/layout/PageWrapper";
 
 const Home: NextPage = () => {
   return (
     <>
       <NextSeo title="Home" />
-      <main className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
-        <h1 className="text-2xl font-extrabold leading-normal dark:text-white md:text-[3rem]">
-          <span className="text-glitchtech">GlitchTech</span> Developments
-        </h1>
-        <hr className="my-1 mx-auto h-1 w-48 rounded border-0 bg-gray-800 dark:bg-white md:my-1" />
-        <h5 className="text-1xl text-center font-extrabold leading-normal dark:text-white md:text-[1.5rem]">
-          Web, Software, App and Game developments
-        </h5>
-      </main>
+      <PageWrapper Title="Home">
+        <p className="wrap center container w-10/12 text-center">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+          cumque vero tempore iusto consectetur ducimus suscipit harum ab
+          repellendus. Velit doloribus nemo enim minus ratione quo. Perspiciatis
+          maiores laborum explicabo!
+        </p>
+      </PageWrapper>
     </>
   );
 };

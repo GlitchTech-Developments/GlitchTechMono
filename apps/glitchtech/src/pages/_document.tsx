@@ -7,7 +7,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document";
-import Favicons from "../components/layout/Favicons";
+import Favicons from "../components/layout/Partials/Favicons";
 
 class MyDocument extends Document {
   static async getInitialProps(

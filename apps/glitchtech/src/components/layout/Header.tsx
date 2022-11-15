@@ -35,7 +35,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="navbar absolute top-0 bg-black">
+      <div className="navbar fixed top-0 z-50 bg-black">
         <div className="navbar-start">
           {currentWindow.w < 715 && (
             <div className="dropdown">
@@ -57,35 +57,19 @@ const Header = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu rounded-box menu-compact mt-3 w-52 bg-base-100 p-2 shadow"
+                className="dropdown-content menu rounded-box menu-compact mt-3 w-52 border-[.1rem] border-glitchtech bg-black p-2 shadow"
               >
-                <li>
-                  <a>Item 1</a>
+                <li className="menu-title">
+                  <span style={{ color: "green" }}>Categories</span>
                 </li>
-                <li tabIndex={0}>
-                  <a className="justify-between">
-                    Parent
-                    <svg
-                      className="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                    </svg>
-                  </a>
-                  <ul className="p-2">
-                    <li>
-                      <a>Submenu 1</a>
-                    </li>
-                    <li>
-                      <a>Submenu 2</a>
-                    </li>
-                  </ul>
+                <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
+                  <a>Web</a>
                 </li>
-                <li>
-                  <a>Item 3</a>
+                <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
+                  <a>Software</a>
+                </li>
+                <li className="mt-1 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
+                  <a>Games</a>
                 </li>
               </ul>
             </div>
