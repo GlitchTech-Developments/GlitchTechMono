@@ -70,7 +70,7 @@ const ThemeProvider = (props: any) => {
 
   return (
     <ThemeContext.Provider value={value}>
-      <div className="bg-gray-600 dark:bg-black">{props.children}</div>
+      <div className="bg-none">{props.children}</div>
     </ThemeContext.Provider>
   );
 };

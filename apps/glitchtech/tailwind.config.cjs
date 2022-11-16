@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
+        translucent: "rgba(0, 0, 0, 0.5)",
         glitchtech: "#00B619",
         glitchtech_alt: "#e73c7e",
       },

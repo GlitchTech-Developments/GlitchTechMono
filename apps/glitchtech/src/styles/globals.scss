@@ -22,6 +22,17 @@
   src: url("../fonts/Mokoto/Mokoto_Glitch_Outline.ttf");
 }
 
+:root {
+  background: none;
+}
+
+body {
+  background-image: url("/images/GlitchTechBackgroundAlt.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .hero-gradient {
   background: linear-gradient(-45deg, black, #e73c7e, #00b619, black);
   background-size: 400% 400%;

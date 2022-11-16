@@ -18,7 +18,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="dark:bg-stone footer items-center border-t-[1px] border-glitchtech p-4 text-neutral-content dark:border-glitchtech">
+    <footer className="footer items-center border-t-[1px] border-glitchtech bg-black p-4 text-neutral-content dark:border-glitchtech">
       <div className="grid-flow-col items-center">
         <Link href={"#"} className="hover:text-glitchtech">
           <Image
@@ -26,12 +26,14 @@ const Footer = () => {
             alt="GlitchTech Developments Logo"
             loading="eager"
             priority={true}
-            className="w-36"
+            className="w-36 select-none"
           />
         </Link>
-        <p>Copyright © {yearStamp()} | All right reserved</p>
+        <p className="select-none">
+          Copyright © {yearStamp()} | All right reserved
+        </p>
       </div>
-      <div className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <div className="hidden grid-flow-col gap-4 place-self-center justify-self-end md:block">
         <Link href={"#"} className="hover:text-glitchtech">
           <GrGithub className="text-2xl" />
         </Link>
