@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: mokoto-glitch;
+  src: url("../fonts/Mokoto/Mokoto_Glitch.ttf");
+}
+
+@font-face {
+  font-family: mokoto-glitch-mk1;
+  src: url("../fonts/Mokoto/Mokoto_Glitch_Mark_I.ttf");
+}
+
+@font-face {
+  font-family: mokoto-glitch-mk2;
+  src: url("../fonts/Mokoto/Mokoto_Glitch_Mark_II.ttf");
+}
+
+@font-face {
+  font-family: mokoto-glitch-outline;
+  src: url("../fonts/Mokoto/Mokoto_Glitch_Outline.ttf");
+}
+
 .hero-gradient {
   background: linear-gradient(-45deg, black, #e73c7e, #00b619, black);
   background-size: 400% 400%;

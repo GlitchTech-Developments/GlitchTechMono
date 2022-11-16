@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@next/font": "^13.0.3",
     "daisyui": "^2.40.1",
     "next": "13.0.2",
     "next-seo": "5.14.0",

@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { useTheme } from "../providers/ThemeProvider/ThemeProvider";
+// import { useTheme } from "../providers/ThemeProvider/ThemeProvider";
 
 import Logo from "../../../public/Images/GlitchTechLogoTransparent.png";
 
-import { GrGithub, GrLinkedin } from "react-icons/gr";
+import { GrGithub /* GrLinkedin */ } from "react-icons/gr";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-  const { ThemeToggleButton } = useTheme();
+  // const { ThemeToggleButton } = useTheme();
   const [currentWindow, setCurrentWindow] = useState({
     w: 0,
     h: 0,
@@ -80,6 +80,7 @@ const Header = () => {
               src={Logo}
               alt="GlitchTech Developments Logo"
               loading="eager"
+              priority={true}
             />
           </a>
         </div>
@@ -93,7 +94,7 @@ const Header = () => {
                 <a className="btn rounded-md bg-black">Software</a>
               </li>
               <li className="ml-2">
-                <a className="btn rounded-md bg-black">Gaming</a>
+                <a className="btn rounded-md bg-black">Games</a>
               </li>
             </ul>
           </div>
@@ -102,12 +103,12 @@ const Header = () => {
           <a className="btn bg-black py-1 px-3">
             <GrGithub className="h-auto w-4" />
           </a>
-          <div className="pr-2" />
+          {/* <div className="pr-2" />
           <a className="btn bg-black py-1 px-3">
             <GrLinkedin className="h-auto w-4" />
-          </a>
+          </a> */}
           <div className="pr-2" />
-          <ThemeToggleButton />
+          {/* <ThemeToggleButton /> */}
         </div>
       </div>
     </>
