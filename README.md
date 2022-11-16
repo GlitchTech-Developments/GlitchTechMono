@@ -22,8 +22,10 @@ pnpm install
 
 ## Usage
 
+> **AppName**: package name of project of choice in apps directory
+
 ```sh
-pnpm run dev
+pnpm run dev --filter [AppName]
 ```
 
 ## Run tests
