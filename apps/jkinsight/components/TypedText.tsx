@@ -1,32 +1,20 @@
 ﻿/* eslint-disable @typescript-eslint/no-explicit-any */
 import Typed from "typed.js"
-import { useEffect, useState } from "react"
+import { useEffect, useRef } from "react"
 
-export default function TypedText(props: any) {
-  const el: any = useState()
+export default function TypedText() {
+  const element: any = useRef(null)
+  const typed: any = useRef(null)
 
-  let preStringChoice = ""
+  const preStringChoice = "Welcome to "
   let loopStringChoice = false
   let stringVarChoice = ["my website"]
 
-  if (props.PageName == "Home") {
-    preStringChoice = "Welcome to "
-  } else if (props.PageName == "AboutMe") {
-    preStringChoice = "Thanks for"
-  }
+  const getVariation = async () => {
+    loopStringChoice = false
+    stringVarChoice = ["my website", "JKinsight"]
 
-  const getVariation = () => {
-    if (props.PageName == "Home") {
-      preStringChoice = "Welcome to "
-      loopStringChoice = false
-      stringVarChoice = ["my website", "JKinsight"]
-    } else if (props.PageName == "AboutMe") {
-      preStringChoice = "Thanks for"
-      loopStringChoice = true
-      stringVarChoice = ["your interest", "checking", "a Tech Enthusiast"]
-    }
-
-    const typed = new Typed(el.current, {
+    const options = {
       strings: stringVarChoice,
       startDelay: 350,
       typeSpeed: 180,
@@ -36,25 +24,32 @@ export default function TypedText(props: any) {
       loop: loopStringChoice,
       showCursor: true,
       cursorChar: "|",
-    })
+    }
 
-    // Destropying
+    typed.current = new Typed(element.current, options)
+
+    // Destroying
     return () => {
-      preStringChoice
-      typed.destroy()
+      typed.current.destroy()
     }
   }
 
   useEffect(() => {
-    getVariation()
+    return () => {
+      getVariation()
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
     <div className="typed-text-div">
       <strong>
-        {preStringChoice}{" "}
-        <span ref={el} className="typed-text font-bold"></span>
+        {preStringChoice}
+        <span
+          ref={element}
+          className="typed-text font-bold"
+          style={{ whiteSpace: "pre" }}
+        />
       </strong>
     </div>
   )

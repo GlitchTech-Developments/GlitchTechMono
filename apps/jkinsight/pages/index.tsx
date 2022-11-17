@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         </span>
 
         <div className="typed-text-div-wrapper">
-          <TypedText PageName="Home" />
+          <TypedText />
         </div>
 
         <div className="grid">

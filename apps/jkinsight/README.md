@@ -6,38 +6,19 @@
   </a>
 </p>
 
-> This is a fork of NextJS with PreactJS instead of React (smaller file sizes) and TypeScript. Feel free to check it out on [here](https://jkinsight.nl)
-
 ## Install
 
 ```sh
-yarn install
+pnpm install
 ```
 
 ## Usage
 
-There are two options to run your PreXT project, you can use the Next dev server or the custom production server.
-First, run the dev server with:
-
 ```sh
-npm run dev
-# or
-yarn dev
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You could also run the PRS<sup>\*</sup> with:
-
-```sh
-npm run server:start
-# or
-yarn server:start
-```
-
-Open [http://localhost:6969](http://localhost:6969) with your browser to see the result.
-
-<span>\* PRS - Production Ready Server<span>
 
 ## Docker
 
@@ -47,6 +28,8 @@ Open [http://localhost:6969](http://localhost:6969) with your browser to see the
 docker build -t <Username>/<ProjectName>:<VersionNumber> .
 docker run -p 3000:3000 <ContainerID>
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Author
 
