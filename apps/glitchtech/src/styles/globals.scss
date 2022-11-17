@@ -23,14 +23,15 @@
 }
 
 :root {
-  background: none;
-}
-
-body {
-  background-image: url("/images/GlitchTechBackgroundAlt.webp");
+  background: url("/images/GlitchTechBackgroundAlt.webp");
+  animation: bg_fadeIn 3s ease-in;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+body {
+  background: none;
 }
 
 .hero-gradient {
@@ -39,6 +40,11 @@ body {
   animation: gradient 5s ease infinite;
   height: 100vh;
   opacity: 0.15;
+}
+
+.gt-hidden {
+  background: none;
+  animation: bg_fadeOut 2.5s ease-out;
 }
 
 @keyframes gradient {
@@ -50,5 +56,36 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes bg_fadeIn {
+  0% {
+    background: rgba(0, 0, 0, 1);
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  95% {
+    background-color: rgba(0, 0, 0, 0.75);
+    background: url("/images/GlitchTechBackgroundAlt.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  100% {
+    background: url("/images/GlitchTechBackgroundAlt.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+}
+
+@keyframes bg_fadeOut {
+  0% {
+    background: rgba(0, 0, 0, 1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
   }
 }

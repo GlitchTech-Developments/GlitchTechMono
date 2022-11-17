@@ -6,6 +6,7 @@ import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 
 const ThemeProvider = dynamic(
   () => import("../components/providers/ThemeProvider/ThemeProvider"),
@@ -48,6 +49,7 @@ function App({ Component, pageProps }: AppProps) {
       />
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
   );
 }
