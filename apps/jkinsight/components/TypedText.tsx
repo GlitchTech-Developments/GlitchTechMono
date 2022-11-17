@@ -7,12 +7,10 @@ export default function TypedText() {
   const typed: any = useRef(null)
 
   const preStringChoice = "Welcome to "
-  let loopStringChoice = false
-  let stringVarChoice = ["my website"]
 
-  const getVariation = () => {
-    loopStringChoice = false
-    stringVarChoice = ["my website", "JKinsight"]
+  useEffect(() => {
+    const loopStringChoice = false
+    const stringVarChoice = ["my website", "JKinsight"]
 
     const options = {
       strings: stringVarChoice,
@@ -31,13 +29,6 @@ export default function TypedText() {
     // Destroying
     return () => {
       typed.current.destroy()
-    }
-  }
-
-  useEffect(() => {
-    getVariation
-    return () => {
-      getVariation()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
