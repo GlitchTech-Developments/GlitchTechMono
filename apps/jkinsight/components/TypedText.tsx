@@ -10,7 +10,7 @@ export default function TypedText() {
   let loopStringChoice = false
   let stringVarChoice = ["my website"]
 
-  const getVariation = async () => {
+  const getVariation = () => {
     loopStringChoice = false
     stringVarChoice = ["my website", "JKinsight"]
 
