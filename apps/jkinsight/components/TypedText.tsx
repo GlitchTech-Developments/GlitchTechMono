@@ -1,4 +1,6 @@
-﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+﻿"use-client"
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Typed from "typed.js"
 import { useEffect, useRef } from "react"
 
@@ -35,6 +37,7 @@ export default function TypedText() {
   }
 
   useEffect(() => {
+    getVariation
     return () => {
       getVariation()
     }
