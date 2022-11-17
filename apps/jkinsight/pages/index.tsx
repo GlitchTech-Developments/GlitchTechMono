@@ -1,8 +1,10 @@
 import type { NextPage } from "next"
+import dynamic from "next/dynamic"
 import { NextSeo } from "next-seo"
 
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai"
-import TypedText from "../components/TypedText"
+const TypedText = dynamic(() => import("../components/TypedText"))
+// import TypedText from "../components/TypedText"
 
 const Home: NextPage = () => {
   return (
