@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { BsArrowDownCircle } from "react-icons/bs";
+import BannerBackground from "../../../images/GlitchTechBackground.webp";
 
 interface IProps {
   Title: string;
@@ -57,7 +58,7 @@ const Banner = (props: IProps) => {
         <div
           className="hero min-h-screen"
           style={{
-            backgroundImage: `url("/Images/GlitchTechBackground.webp")`,
+            backgroundImage: `url('${BannerBackground.src}')`,
           }}
         >
           <div className="hero-gradient hero-overlay"></div>
@@ -81,7 +82,7 @@ const Banner = (props: IProps) => {
         <div
           className="hero min-h-screen"
           style={{
-            backgroundImage: `url("/Images/GlitchTechBackground.webp")`,
+            backgroundImage: `url('${BannerBackground.src}')`,
           }}
         >
           <div className="hero-gradient hero-overlay"></div>

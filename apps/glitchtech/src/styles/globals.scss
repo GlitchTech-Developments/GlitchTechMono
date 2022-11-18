@@ -23,7 +23,7 @@
 }
 
 :root {
-  background: url("/images/GlitchTechBackgroundAlt.webp");
+  background: url("../images/GlitchTechBackgroundAlt.webp");
   animation: bg_fadeIn 3s ease-in;
   background-size: cover;
   background-repeat: no-repeat;
@@ -68,13 +68,13 @@ body {
   }
   95% {
     background-color: rgba(0, 0, 0, 0.75);
-    background: url("/images/GlitchTechBackgroundAlt.webp");
+    background: url("../images/GlitchTechBackgroundAlt.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
   100% {
-    background: url("/images/GlitchTechBackgroundAlt.webp");
+    background: url("../images/GlitchTechBackgroundAlt.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
