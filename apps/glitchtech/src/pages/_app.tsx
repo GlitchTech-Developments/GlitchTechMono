@@ -1,21 +1,15 @@
 import "../styles/globals.scss";
 
 import type { AppProps } from "next/app";
-import dynamic from "next/dynamic";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
 
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
-const ThemeProvider = dynamic(
-  () => import("../components/providers/ThemeProvider/ThemeProvider"),
-  { ssr: false }
-);
-
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider>
+    <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
@@ -50,7 +44,7 @@ function App({ Component, pageProps }: AppProps) {
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </ThemeProvider>
+    </>
   );
 }
 

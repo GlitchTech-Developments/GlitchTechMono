@@ -15,7 +15,7 @@ const Banner = (props: IProps) => {
   const goToFirst = () => {
     if (window !== undefined) {
       window.scrollTo({
-        top: window.screen.availHeight / 1.05,
+        top: window.screen.availHeight / 1.03,
         behavior: "smooth",
       });
     }

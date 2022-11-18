@@ -8,11 +8,22 @@ import GoToTopBtn from "./Partials/GoToTopBtn";
 const PageWrapper = (props: any) => {
   const [loading, setloading] = useState(true);
   const [fadeStart, setFadeStart] = useState(false);
+  const [fadeEnd, setFadeEnd] = useState(false);
 
   const Loaded = async () => {
     await setTimeout(() => {
       setloading(false);
     }, 1750);
+
+    if (loading == false) {
+      await setTimeout(() => {
+        setFadeEnd(true);
+      }, 50);
+    } else {
+      await setTimeout(() => {
+        setFadeStart(true);
+      }, 1000);
+    }
   };
 
   const PageLoader = () => {
@@ -28,14 +39,11 @@ const PageWrapper = (props: any) => {
         </div>
       );
     } else {
-      async () =>
-        await setTimeout(() => {
-          setFadeStart(true);
-        }, 1000);
-
       return (
         <div
-          className={`gt-hidden fixed z-50 flex h-screen w-full bg-black ${
+          className={`${
+            fadeEnd == false ? "gt-hidden" : "hidden"
+          } fixed z-50 flex h-screen w-full bg-black ${
             fadeStart == true && "hidden"
           }`}
         >
