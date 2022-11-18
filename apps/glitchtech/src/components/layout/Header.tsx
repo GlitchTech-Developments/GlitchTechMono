@@ -1,7 +1,7 @@
 import Image from "next/image";
 // import { useTheme } from "../providers/ThemeProvider/ThemeProvider";
 
-import Logo from "../../../public/Images/GlitchTechLogoTransparent.png";
+import Logo from "../../images/GlitchTechLogoTransparent.png";
 
 import { GrGithub /* GrLinkedin */ } from "react-icons/gr";
 import { useEffect, useState } from "react";

@@ -1,4 +1,4 @@
-import Logo from "../../../public/Images/GlitchTechLogoTransparent.png";
+import Logo from "../../images/GlitchTechLogoTransparent.png";
 
 import Link from "next/link";
 import Image from "next/image";
