@@ -60,6 +60,7 @@ const PageWrapper = (props: any) => {
 
   useEffect(() => {
     Loaded();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
