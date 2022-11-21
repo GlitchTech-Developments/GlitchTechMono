@@ -51,13 +51,15 @@ const ToolsContent = () => {
           <hr />
           <div className="col-12 col-12-medium">
             <h4>Website Stats:</h4>
-            <p>
+            <p style={{ paddingBottom: "1rem", paddingTop: ".25rem" }}>
               <a href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl">
                 <Image
                   src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
                   alt="Seobility Score of hardwarehulp.nl"
-                  height={50}
-                  width={50}
+                  height={80}
+                  width={80}
+                  priority={false}
+                  loading="lazy"
                 />
               </a>
             </p>
