@@ -1,4 +1,5 @@
-﻿import { useRouter } from "next/router"
+﻿import Image from "next/image"
+import { useRouter } from "next/router"
 
 const ToolsContent = () => {
   const router = useRouter()
@@ -47,13 +48,16 @@ const ToolsContent = () => {
               </div>
             </div>
           </div>
-          <div className="row">
-            <h1>Website Stats:</h1>
+          <hr />
+          <div className="col-12 col-12-medium">
+            <h4>Website Stats:</h4>
             <p>
               <a href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl">
-                <img
+                <Image
                   src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
                   alt="Seobility Score of hardwarehulp.nl"
+                  height={50}
+                  width={50}
                 />
               </a>
             </p>
