@@ -15,7 +15,7 @@ const ToolsContent = () => {
         <div className="content borders no-select">
           <div className="row">
             <div className="col-12 col-12-medium">
-              <h4>Diensten</h4>
+              <h4>Tools</h4>
               <div className="table-wrapper">
                 <table>
                   <thead>
@@ -46,6 +46,17 @@ const ToolsContent = () => {
                 </table>
               </div>
             </div>
+          </div>
+          <div className="row">
+            <h1>Website Stats:</h1>
+            <p>
+              <a href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl">
+                <img
+                  src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
+                  alt="Seobility Score of hardwarehulp.nl"
+                />
+              </a>
+            </p>
           </div>
         </div>
       </div>
