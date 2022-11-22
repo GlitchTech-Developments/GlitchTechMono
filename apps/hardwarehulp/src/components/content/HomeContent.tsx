@@ -17,7 +17,9 @@ const HomeContent = () => {
       <section className="wrapper" style={{ paddingTop: "3rem" }}>
         <div className="inner">
           <header className="special no-select">
-            <h2>Waar kan ik u mee van dienst zijn?</h2>
+            <h1 style={{ fontSize: "2.25rem", lineHeight: 1.3 }}>
+              Waar kan ik u mee van dienst zijn?
+            </h1>
             <p>
               Alle diensten die ik aanbied worden uitgebreider uitgelegd op de
               &quot;Diensten&quot; pagina.
