@@ -26,12 +26,12 @@ const ImageLoader = ({ src, width, height, quality }: any) => {
         checkedURL = `https://hardwarehulp.nl${url.pathname}`
       } else {
         if (url.search) {
-          checkedURL = `http://${domain + url.pathname + url.search}`
+          checkedURL = `https://${domain + url.pathname + url.search}`
           loaderString = `&w=${width}&h=${height ? height : "auto"}&q=${
             quality || 75
           }`
         } else {
-          checkedURL = `http://${domain + url.pathname}`
+          checkedURL = `https://${domain + url.pathname}`
         }
       }
     })
