@@ -23,11 +23,7 @@ const ImageLoader = ({ src, width, height, quality }: any) => {
 
     local.find((value) => {
       if (value == domain) {
-        if (value == "localhost") {
-          checkedURL = `http://localhost:3000${url.pathname}`
-        } else {
-          checkedURL = `https://hardwarehulp.nl${url.pathname}`
-        }
+        checkedURL = `https://hardwarehulp.nl${url.pathname}`
       } else {
         if (url.search) {
           checkedURL = `http://${domain + url.pathname + url.search}`
