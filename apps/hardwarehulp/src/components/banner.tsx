@@ -9,9 +9,14 @@ const Banner = (props: BannerProps) => {
   return (
     <section id="banner">
       <div className="inner" style={{ opacity: 1 }}>
-        <h2 style={{ opacity: 1, fontSize: "3rem", lineHeight: 1.2 }}>
-          {props.title}
-        </h2>
+        <h1 style={{ opacity: 1 }}>
+          {props.title}{" "}
+          <small style={{ display: "none" }}>
+            {
+              " by HardwareHulp. Hosting, Technische ondersteuning, Computers op maat en Computer Upgrades."
+            }
+          </small>
+        </h1>
         <p
           style={{
             opacity: 1,
