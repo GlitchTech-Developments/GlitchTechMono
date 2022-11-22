@@ -13,7 +13,7 @@ const Banner = (props: BannerProps) => {
           {props.title}
           <small style={{ display: "none" }}>
             {
-              "HardwareHulp. Hosting, Technische ondersteuning, Computers op maat en Computer Upgrades. Uitgevoerd doow Jesse Koldewijn."
+              "HardwareHulp, Technische ondersteuning, Computers op maat, Computer Upgrades, Diensten, Jesse Koldewijn."
             }
           </small>
         </h1>
