@@ -1,5 +1,6 @@
 ﻿import Image from "next/image"
 import { useRouter } from "next/router"
+import ImageLoader from "../../utils/ImageLoader"
 
 const ToolsContent = () => {
   const router = useRouter()
@@ -56,10 +57,9 @@ const ToolsContent = () => {
                 <Image
                   src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
                   alt="Seobility Score of hardwarehulp.nl"
+                  loader={ImageLoader}
                   height={80}
                   width={80}
-                  priority={false}
-                  loading="lazy"
                 />
               </a>
             </p>
