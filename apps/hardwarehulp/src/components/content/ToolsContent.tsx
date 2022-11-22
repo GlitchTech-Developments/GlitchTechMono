@@ -1,9 +1,12 @@
 ﻿import Image from "next/image"
 import { useRouter } from "next/router"
+import { useState } from "react"
 import ImageLoader from "../../utils/ImageLoader"
 
 const ToolsContent = () => {
   const router = useRouter()
+
+  const [SeoCheckLoaded, setSeoCheckLoaded] = useState(false)
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const clickRouter = (e: any, link: string) => {
@@ -52,14 +55,38 @@ const ToolsContent = () => {
           <hr />
           <div className="col-12 col-12-medium">
             <h4>Website Stats:</h4>
-            <p style={{ paddingBottom: "1rem", paddingTop: ".25rem" }}>
+            <p
+              style={{
+                paddingBottom: "1rem",
+                paddingTop: ".25rem",
+                position: "relative",
+              }}
+            >
+              {SeoCheckLoaded !== true && (
+                <span
+                  style={{
+                    position: "absolute",
+                    marginTop: "auto",
+                    marginBottom: "auto",
+                  }}
+                >
+                  Loading...
+                </span>
+              )}
               <a href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl">
                 <Image
                   src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
                   alt="Seobility Score of hardwarehulp.nl"
+                  style={
+                    SeoCheckLoaded == false
+                      ? { visibility: "hidden" }
+                      : { display: "block" }
+                  }
                   loader={ImageLoader}
                   height={80}
                   width={80}
+                  priority={true}
+                  onLoadingComplete={() => setSeoCheckLoaded(true)}
                 />
               </a>
             </p>

@@ -1,22 +1,41 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const ImageLoader = ({ src, width, quality }: any) => {
-  const url = new URL(src)
-  let loaderString = `?w=${width}&q=${quality || 76}`
+const ImageLoader = ({ src, width, height, quality }: any) => {
+  let url: URL | any = null
+
+  if (src.startsWith("/") == false) {
+    url = new URL(src)
+  } else {
+    const origin =
+      typeof window !== "undefined" && window.location.origin
+        ? window.location.origin
+        : "http://localhost:3000"
+    url = new URL(origin + src)
+  }
+
+  let loaderString = `?w=${width}&h=${height ? height : "auto"}&q=${
+    quality || 76
+  }`
 
   const DomainCheck = () => {
     let checkedURL = src
     const domain = url.hostname
-    const local = ["hardwarehulp.nl", "www.hardwarehulp.nl"]
+    const local = ["hardwarehulp.nl", "www.hardwarehulp.nl", "localhost"]
 
     local.find((value) => {
       if (value == domain) {
-        checkedURL = `https://hardwarehulp.nl${url.pathname}`
+        if (value == "localhost") {
+          checkedURL = `http://localhost:3000${url.pathname}`
+        } else {
+          checkedURL = `https://hardwarehulp.nl${url.pathname}`
+        }
       } else {
         if (url.search) {
-          checkedURL = `https://${domain + url.pathname + url.search}`
-          loaderString = `&w=${width}&q=${quality || 75}`
+          checkedURL = `http://${domain + url.pathname + url.search}`
+          loaderString = `&w=${width}&h=${height ? height : "auto"}&q=${
+            quality || 75
+          }`
         } else {
-          checkedURL = `https://${domain + url.pathname}`
+          checkedURL = `http://${domain + url.pathname}`
         }
       }
     })

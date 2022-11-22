@@ -1,5 +1,7 @@
 ﻿/* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
 import { useRouter } from "next/router"
+import ImageLoader from "../../utils/ImageLoader"
 
 const HomeContent = () => {
   const router = useRouter()
@@ -118,9 +120,12 @@ const HomeContent = () => {
                     paddingTop: "5px",
                   }}
                 >
-                  <img
-                    src="img/Jesse.webp"
+                  <Image
+                    src="/img/Jesse.webp"
                     alt="Jesse Koldewijn, Eigenaar Hardwarehulp"
+                    height={85}
+                    width={85}
+                    loader={ImageLoader}
                   />
                 </div>
               </div>

@@ -17,7 +17,7 @@ const Header = () => {
       <a className="logo no-select" onClick={(e) => clickRouter(e, "/")}>
         <Image
           id="header-icon"
-          src="https://hardwarehulp.nl/img/logo.png"
+          src="/img/logo.webp"
           alt="Logo Hardwarehulp"
           height={70}
           width={70}

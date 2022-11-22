@@ -2,7 +2,6 @@
 
 const ServicesContent = () => {
   const currentWindow = useWindowSize()
-  console.log(currentWindow)
 
   return (
     <section id="main" className="wrapper">
