@@ -10,10 +10,10 @@ const Banner = (props: BannerProps) => {
     <section id="banner">
       <div className="inner" style={{ opacity: 1 }}>
         <h1 style={{ opacity: 1 }}>
-          {props.title}{" "}
+          {props.title}
           <small style={{ display: "none" }}>
             {
-              " by HardwareHulp. Hosting, Technische ondersteuning, Computers op maat en Computer Upgrades."
+              "HardwareHulp. Hosting, Technische ondersteuning, Computers op maat en Computer Upgrades. Uitgevoerd doow Jesse Koldewijn."
             }
           </small>
         </h1>
