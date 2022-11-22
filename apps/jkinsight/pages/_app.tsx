@@ -3,12 +3,9 @@ import delay from "../components/functions/utils/delay"
 
 import { useEffect } from "react"
 import type { AppProps } from "next/app"
-import dynamic from "next/dynamic"
 import { NextSeo } from "next-seo"
 
-const MainLayout = dynamic(
-  () => import("../components/layouts/MainLayout/MainLayout")
-)
+import MainLayout from "../components/layouts/MainLayout/MainLayout"
 
 function MyApp({ Component, pageProps }: AppProps) {
   if (typeof window !== "undefined") {
