@@ -73,7 +73,11 @@ const ToolsContent = () => {
                   Loading...
                 </span>
               )}
-              <a href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl">
+              <a
+                href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Image
                   src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
                   alt="Seobility Score of hardwarehulp.nl"
