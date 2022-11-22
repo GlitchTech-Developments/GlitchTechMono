@@ -17,6 +17,7 @@ export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
   images: {
+    minimumCacheTTL: 6000,
     remotePatterns: [
       {
         protocol: "https",
