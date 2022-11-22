@@ -12,9 +12,8 @@ const Banner = (props: BannerProps) => {
         <h1 style={{ opacity: 1 }}>
           {props.title}
           <small style={{ display: "none" }}>
-            {
-              "HardwareHulp, Technische ondersteuning, Computers op maat, Computer Upgrades, Diensten, Jesse Koldewijn."
-            }
+            {" " +
+              "Technische ondersteuning, Computers op maat, Computer Upgrades, Diensten, Jesse Koldewijn."}
           </small>
         </h1>
         <p
