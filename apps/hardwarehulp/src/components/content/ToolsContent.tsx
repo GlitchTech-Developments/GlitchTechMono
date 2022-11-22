@@ -1,4 +1,6 @@
-﻿import { useRouter } from "next/router"
+﻿import Image from "next/image"
+import { useRouter } from "next/router"
+import ImageLoader from "../../utils/ImageLoader"
 
 const ToolsContent = () => {
   const router = useRouter()
@@ -15,7 +17,7 @@ const ToolsContent = () => {
         <div className="content borders no-select">
           <div className="row">
             <div className="col-12 col-12-medium">
-              <h4>Diensten</h4>
+              <h4>Tools</h4>
               <div className="table-wrapper">
                 <table>
                   <thead>
@@ -46,6 +48,21 @@ const ToolsContent = () => {
                 </table>
               </div>
             </div>
+          </div>
+          <hr />
+          <div className="col-12 col-12-medium">
+            <h4>Website Stats:</h4>
+            <p style={{ paddingBottom: "1rem", paddingTop: ".25rem" }}>
+              <a href="https://freetools.seobility.net/en/seocheck/hardwarehulp.nl">
+                <Image
+                  src="https://freetools.seobility.net/widget/widget.png?url=hardwarehulp.nl"
+                  alt="Seobility Score of hardwarehulp.nl"
+                  loader={ImageLoader}
+                  height={80}
+                  width={80}
+                />
+              </a>
+            </p>
           </div>
         </div>
       </div>

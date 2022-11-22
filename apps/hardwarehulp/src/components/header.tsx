@@ -1,4 +1,7 @@
-﻿import { useRouter } from "next/router"
+﻿import Image from "next/image"
+import { useRouter } from "next/router"
+
+import ImageLoader from "../utils/ImageLoader"
 
 const Header = () => {
   const router = useRouter()
@@ -12,7 +15,14 @@ const Header = () => {
   return (
     <header id="header">
       <a className="logo no-select" onClick={(e) => clickRouter(e, "/")}>
-        <img id="header-icon" src="/img/logo.png" alt="Logo Hardwarehulp" />
+        <Image
+          id="header-icon"
+          src="https://hardwarehulp.nl/img/logo.png"
+          alt="Logo Hardwarehulp"
+          height={70}
+          width={70}
+          loader={ImageLoader}
+        />
       </a>
       <nav className="no-select">
         <a
