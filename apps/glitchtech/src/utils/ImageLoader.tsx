@@ -25,7 +25,8 @@ const ImageLoader = ({ src, width, height, quality }: any) => {
       if (value == domain) {
         if (
           process.env.NEXT_APP_ENV == "development" ||
-          origin == "http://localhost:3000"
+          (typeof window !== "undefined" &&
+            window.location.origin == "http://localhost:3000")
         ) {
           checkedURL = `http://localhost:3000${url.pathname}`;
         } else {
