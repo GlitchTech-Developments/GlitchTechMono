@@ -23,14 +23,10 @@ const ImageLoader = ({ src, width, height, quality }: any) => {
 
     local.find((value) => {
       if (value == domain) {
-        if (
-          process.env.NEXT_APP_ENV == "development" ||
-          (typeof window !== "undefined" &&
-            window.location.origin == "http://localhost:3000")
-        ) {
+        if (process.env.NEXT_APP_ENV == "development") {
           checkedURL = `http://localhost:3000${url.pathname}`;
         } else {
-          checkedURL = `https://glitchtech.eu${url.pathname}`;
+          checkedURL = `https://glitchtech.vercel.app${url.pathname}`;
         }
       } else {
         if (url.search) {
