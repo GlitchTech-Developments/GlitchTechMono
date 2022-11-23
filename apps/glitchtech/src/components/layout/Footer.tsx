@@ -26,7 +26,7 @@ const Footer = () => {
             width={100}
             height={100}
             loader={ImageLoader}
-            className="w-36 select-none"
+            className="h-auto w-36 select-none"
           />
         </Link>
         <p className="select-none">

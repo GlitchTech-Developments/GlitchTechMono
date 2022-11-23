@@ -81,6 +81,7 @@ const Header = () => {
               height={100}
               loader={ImageLoader}
               alt="GlitchTech Developments Logo"
+              className="h-auto w-auto"
             />
           </a>
         </div>

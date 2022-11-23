@@ -23,7 +23,14 @@ const ImageLoader = ({ src, width, height, quality }: any) => {
 
     local.find((value) => {
       if (value == domain) {
-        checkedURL = `https://glitchtech.eu${url.pathname}`;
+        if (
+          process.env.NEXT_APP_ENV == "development" ||
+          origin == "http://localhost:3000"
+        ) {
+          checkedURL = `http://localhost:3000${url.pathname}`;
+        } else {
+          checkedURL = `https://glitchtech.eu${url.pathname}`;
+        }
       } else {
         if (url.search) {
           checkedURL = `https://${domain + url.pathname + url.search}`;

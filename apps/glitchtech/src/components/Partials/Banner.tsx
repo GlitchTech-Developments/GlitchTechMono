@@ -58,7 +58,7 @@ const Banner = (props: IProps) => {
             height={100}
             loader={ImageLoader}
             alt="GlitchTech Banner image"
-            className="absolute h-screen"
+            className="absolute h-screen w-full"
           />
           <div className="hero-gradient hero-overlay"></div>
           <div className="hero-content flex flex-col text-center text-neutral-content">
@@ -77,7 +77,7 @@ const Banner = (props: IProps) => {
             height={100}
             loader={ImageLoader}
             alt="GlitchTech Banner image"
-            className="absolute h-screen"
+            className="absolute h-screen w-full"
           />
           <div className="hero-gradient hero-overlay"></div>
           <div className="hero-content flex flex-col text-center text-neutral-content">
