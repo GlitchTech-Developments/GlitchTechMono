@@ -1,8 +1,7 @@
-import Logo from "../../images/GlitchTechLogoTransparent.png";
-
 import Link from "next/link";
 import Image from "next/image";
 import { GrGithub /* GrLinkedin */ } from "react-icons/gr";
+import ImageLoader from "../../utils/ImageLoader";
 // import { SiSteam } from "react-icons/si";
 
 const Footer = () => {
@@ -22,10 +21,11 @@ const Footer = () => {
       <div className="grid-flow-col items-center">
         <Link href={"#"} className="hover:text-glitchtech">
           <Image
-            src={Logo}
+            src={"/images/GlitchTechLogoTransparent.png"}
             alt="GlitchTech Developments Logo"
-            loading="eager"
-            priority={true}
+            width={100}
+            height={100}
+            loader={ImageLoader}
             className="w-36 select-none"
           />
         </Link>

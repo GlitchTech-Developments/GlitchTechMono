@@ -1,9 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import PuffLoader from "react-spinners/PuffLoader";
-import Banner from "./Partials/Banner";
-import GoToTopBtn from "./Partials/GoToTopBtn";
+
+const Banner = dynamic(() => import("../Partials/Banner"), {
+  ssr: true,
+});
 
 const PageWrapper = (props: any) => {
   const [loading, setloading] = useState(true);
@@ -66,12 +69,14 @@ const PageWrapper = (props: any) => {
   return (
     <div>
       <PageLoader />
-      <Banner Title={props.Title} Description={""} />
+      <Banner
+        Title={props.Title ? props.Title : ""}
+        Description={props.Description ? props.Description : ""}
+      />
       <div className="hero-overlay bg-translucent">
         <main className="container mx-auto flex min-h-screen flex-col items-center py-12 px-6">
           {props.children}
         </main>
-        <GoToTopBtn />
       </div>
     </div>
   );

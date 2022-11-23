@@ -23,7 +23,7 @@
 }
 
 :root {
-  background: url("../images/GlitchTechBackgroundAlt.webp");
+  background: url("/images/GlitchTechBackgroundAlt.webp");
   animation: bg_fadeIn 2s ease-in;
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ body {
     background: rgba(0, 0, 0, 1);
   }
   100% {
-    background: url("../images/GlitchTechBackgroundAlt.webp");
+    background: url("/images/GlitchTechBackgroundAlt.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

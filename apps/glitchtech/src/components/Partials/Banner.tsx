@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BsArrowDownCircle } from "react-icons/bs";
-import BannerBackground from "../../../images/GlitchTechBackground.webp";
+import Image from "next/image";
+import ImageLoader from "../../utils/ImageLoader";
 
 interface IProps {
   Title: string;
@@ -11,15 +11,6 @@ interface IProps {
 const Banner = (props: IProps) => {
   const Title = props.Title.toString();
   const Description = props.Description?.toString();
-
-  const goToFirst = () => {
-    if (window !== undefined) {
-      window.scrollTo({
-        top: window.screen.availHeight / 1.03,
-        behavior: "smooth",
-      });
-    }
-  };
 
   const BannerContent = () => {
     switch (Title) {
@@ -57,34 +48,37 @@ const Banner = (props: IProps) => {
       return (
         <div
           className="hero min-h-screen"
-          style={{
-            backgroundImage: `url('${BannerBackground.src}')`,
-          }}
+          // style={{
+          //   backgroundImage: `url('${BannerBackground.src}')`,
+          // }}
         >
+          <Image
+            src={"/images/GlitchTechBackground.webp"}
+            width={100}
+            height={100}
+            loader={ImageLoader}
+            alt="GlitchTech Banner image"
+            className="absolute h-screen"
+          />
           <div className="hero-gradient hero-overlay"></div>
           <div className="hero-content flex flex-col text-center text-neutral-content">
             <div className="w-full flex-1">
               <BannerContent />
-            </div>
-            <div className="absolute bottom-6">
-              <div
-                className="text-[2rem] hover:text-[2.1rem] hover:text-white active:text-[2.1rem]"
-                onClick={goToFirst}
-              >
-                <BsArrowDownCircle />
-              </div>
             </div>
           </div>
         </div>
       );
     } else {
       return (
-        <div
-          className="hero min-h-screen"
-          style={{
-            backgroundImage: `url('${BannerBackground.src}')`,
-          }}
-        >
+        <div className="hero min-h-screen">
+          <Image
+            src={"/images/GlitchTechBackground.webp"}
+            width={100}
+            height={100}
+            loader={ImageLoader}
+            alt="GlitchTech Banner image"
+            className="absolute h-screen"
+          />
           <div className="hero-gradient hero-overlay"></div>
           <div className="hero-content flex flex-col text-center text-neutral-content">
             <div className="w-full flex-1">
@@ -93,14 +87,6 @@ const Banner = (props: IProps) => {
                 <br />
                 <small className="text-white">{Description}</small>
               </h1>
-            </div>
-            <div className="absolute bottom-6">
-              <button
-                className="text-[2rem] hover:text-[2.1rem] hover:text-white"
-                onClick={goToFirst}
-              >
-                <BsArrowDownCircle />
-              </button>
             </div>
           </div>
         </div>

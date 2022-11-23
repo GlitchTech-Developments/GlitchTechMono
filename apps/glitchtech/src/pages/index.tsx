@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
 import PageWrapper from "../components/layout/PageWrapper";
-import Section from "../components/layout/Partials/Section";
+import Section from "../components/Partials/Section";
 
 const Home: NextPage = () => {
   return (

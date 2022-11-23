@@ -1,10 +1,9 @@
 import Image from "next/image";
 // import { useTheme } from "../providers/ThemeProvider/ThemeProvider";
 
-import Logo from "../../images/GlitchTechLogoTransparent.png";
-
 import { GrGithub /* GrLinkedin */ } from "react-icons/gr";
 import { useEffect, useState } from "react";
+import ImageLoader from "../../utils/ImageLoader";
 
 const Header = () => {
   // const { ThemeToggleButton } = useTheme();
@@ -77,10 +76,11 @@ const Header = () => {
 
           <a className="w-40">
             <Image
-              src={Logo}
+              src={"/images/GlitchTechLogoTransparent.png"}
+              width={100}
+              height={100}
+              loader={ImageLoader}
               alt="GlitchTech Developments Logo"
-              loading="eager"
-              priority={true}
             />
           </a>
         </div>
