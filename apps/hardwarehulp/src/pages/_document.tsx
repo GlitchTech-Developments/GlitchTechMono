@@ -7,6 +7,7 @@ import Document, {
   Main,
   NextScript,
 } from "next/document"
+import Favicons from "../components/favicons"
 
 class MyDocument extends Document {
   static async getInitialProps(
@@ -21,7 +22,7 @@ class MyDocument extends Document {
     return (
       <Html lang="nl-NL">
         <Head>
-          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+          <Favicons />
         </Head>
         <NextSeo
           titleTemplate="%s | HardwareHulp - IT hulp aan huis in Kampen, Overijssel"
