@@ -1,11 +1,21 @@
 import "../styles/globals.scss";
 
 import type { AppProps } from "next/app";
-import { NextSeo } from "next-seo";
 import Head from "next/head";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { NextSeo } from "next-seo";
+import ImageLoader from "../utils/ImageLoader";
 
-import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
+// import Header from "../components/layout/Header";
+// import Footer from "../components/layout/Footer";
+
+const Header = dynamic(() => import("../components/layout/Header"), {
+  ssr: false,
+});
+const Footer = dynamic(() => import("../components/layout/Footer"), {
+  ssr: false,
+});
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -26,7 +36,7 @@ function App({ Component, pageProps }: AppProps) {
             "At GlitchTech Developments we work on web, app, software and game projects. We are located in the Netherlands.",
           images: [
             {
-              url: "/images/GlitchTechBanner.webp",
+              url: "/images/GlitchTechLogo.webp",
               width: 800,
               height: 600,
               alt: "At GlitchTech Developments we work on web, app, software and game projects. We are located in the Netherlands.",
@@ -42,6 +52,17 @@ function App({ Component, pageProps }: AppProps) {
         }}
       />
       <Header />
+      <Image
+        src={
+          "https://glitchtech.vercel.app/images/GlitchTechBackgroundAlt.webp"
+        }
+        width={100}
+        height={100}
+        loader={ImageLoader}
+        priority={true}
+        alt="GlitchTech Banner image"
+        className="fixed z-[-1] h-screen w-screen"
+      />
       <Component {...pageProps} />
       <Footer />
     </>

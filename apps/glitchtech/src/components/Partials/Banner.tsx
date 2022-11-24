@@ -14,13 +14,13 @@ const Banner = (props: IProps) => {
 
   const BannerContent = () => {
     switch (Title) {
-      case "Web":
+      case "Web Developments":
         return (
           <>
-            <h1 className="text-center font-mokoto_glitch_mk2 text-[2rem] leading-tight dark:text-white sm:text-[4rem] md:text-[4rem]">
+            <h1 className="text-center font-mokoto_glitch_mk2 text-[2rem] leading-tight dark:text-white sm:text-[3rem] md:text-[4rem]">
               <span className="text-glitchtech">{Title}</span>
             </h1>
-            <p className="mb-5 mt-6 font-mokoto_glitch text-[.8rem]">
+            <p className="mb-5 mt-6 font-mokoto_glitch text-[.8rem] ">
               {Description ? Description : ""}
             </p>
           </>
@@ -28,7 +28,7 @@ const Banner = (props: IProps) => {
       default:
         return (
           <>
-            <h1 className="text-center font-mokoto_glitch_mk2 text-[2rem] leading-tight dark:text-white sm:text-[4rem] md:text-[4rem]">
+            <h1 className="text-center font-mokoto_glitch_mk2 text-[2rem] leading-tight dark:text-white sm:text-[3rem] md:text-[4rem]">
               <span className="text-glitchtech">
                 GlitchTech
                 <br />
@@ -44,54 +44,28 @@ const Banner = (props: IProps) => {
   };
 
   const BannerInstance = () => {
-    if (Title == "Home") {
-      return (
-        <div
-          className="hero min-h-screen"
-          // style={{
-          //   backgroundImage: `url('${BannerBackground.src}')`,
-          // }}
-        >
-          <Image
-            src={"/images/GlitchTechBackground.webp"}
-            width={100}
-            height={100}
-            loader={ImageLoader}
-            alt="GlitchTech Banner image"
-            className="absolute h-screen w-full"
-          />
-          <div className="hero-gradient hero-overlay"></div>
-          <div className="hero-content flex flex-col text-center text-neutral-content">
-            <div className="w-full flex-1">
-              <BannerContent />
-            </div>
+    return (
+      <div className="hero mt-[4rem] max-h-screen w-full sm:max-h-screen md:max-h-screen lg:h-full">
+        <Image
+          src={
+            "https://glitchtech.vercel.app/images/GlitchTechBackgroundDropoff.webp"
+          }
+          width={100}
+          height={100}
+          loader={ImageLoader}
+          priority={true}
+          alt="GlitchTech Banner image"
+          className="h-max-h-screen gt_bottom_fade_dark w-full sm:max-h-screen md:max-h-screen lg:h-full"
+        />
+
+        <div className="hero-gradient h-max-h-screen sm:max-full hero-overlay w-full md:max-h-full lg:h-full"></div>
+        <div className="hero-content flex flex-col text-center text-neutral-content">
+          <div className="mx-6 w-full flex-1">
+            <BannerContent />
           </div>
         </div>
-      );
-    } else {
-      return (
-        <div className="hero min-h-screen">
-          <Image
-            src={"/images/GlitchTechBackground.webp"}
-            width={100}
-            height={100}
-            loader={ImageLoader}
-            alt="GlitchTech Banner image"
-            className="absolute h-screen w-full"
-          />
-          <div className="hero-gradient hero-overlay"></div>
-          <div className="hero-content flex flex-col text-center text-neutral-content">
-            <div className="w-full flex-1">
-              <h1 className="text-center font-mokoto_glitch_mk2 text-[2rem] leading-tight dark:text-white sm:text-[4rem] md:text-[4rem]">
-                <span className="text-glitchtech">{Title}</span>
-                <br />
-                <small className="text-white">{Description}</small>
-              </h1>
-            </div>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   };
 
   return <BannerInstance />;

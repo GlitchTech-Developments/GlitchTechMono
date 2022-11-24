@@ -22,14 +22,6 @@
   src: url("../fonts/Mokoto/Mokoto_Glitch_Outline.ttf");
 }
 
-:root {
-  background: url("/images/GlitchTechBackgroundAlt.webp");
-  animation: bg_fadeIn 2s ease-in;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 body {
   background: none;
 }
@@ -38,13 +30,18 @@ body {
   background: linear-gradient(-45deg, black, #e73c7e, #00b619, black);
   background-size: 400% 400%;
   animation: gradient 5s ease infinite;
-  height: 100vh;
   opacity: 0.15;
 }
 
 .gt-hidden {
   background: none;
   animation: bg_fadeOut 2.5s ease-out;
+}
+
+.gt_bottom_fade_dark {
+  -webkit-box-shadow: 0px 35px 8px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 35px 8px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 35px 8px 0px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes gradient {
@@ -65,17 +62,5 @@ body {
   }
   100% {
     background-color: rgba(0, 0, 0, 0);
-  }
-}
-
-@keyframes bg_fadeIn {
-  0% {
-    background: rgba(0, 0, 0, 1);
-  }
-  100% {
-    background: url("/images/GlitchTechBackgroundAlt.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
 }

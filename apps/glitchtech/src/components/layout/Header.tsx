@@ -1,16 +1,22 @@
 import Image from "next/image";
-// import { useTheme } from "../providers/ThemeProvider/ThemeProvider";
 
 import { GrGithub /* GrLinkedin */ } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import ImageLoader from "../../utils/ImageLoader";
+import Router, { useRouter } from "next/router";
 
 const Header = () => {
-  // const { ThemeToggleButton } = useTheme();
+  const localRouter = useRouter();
+
   const [currentWindow, setCurrentWindow] = useState({
     w: 0,
     h: 0,
   });
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
+  const RoutePush = (url: string) => {
+    Router.push(url);
+  };
 
   useEffect(() => {
     setCurrentWindow({
@@ -58,11 +64,34 @@ const Header = () => {
                 tabIndex={0}
                 className="dropdown-content menu rounded-box menu-compact mt-3 w-52 border-[.1rem] border-glitchtech bg-black p-2 shadow"
               >
+                {localRouter.pathname !== "/" ? (
+                  <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
+                    <button
+                      className="btn rounded-md bg-black"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        RoutePush("/");
+                      }}
+                    >
+                      Home
+                    </button>
+                  </li>
+                ) : (
+                  <></>
+                )}
                 <li className="menu-title">
                   <span style={{ color: "green" }}>Categories</span>
                 </li>
                 <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
-                  <a>Web</a>
+                  <button
+                    className="btn rounded-md bg-black"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      RoutePush("/web-developments");
+                    }}
+                  >
+                    Web
+                  </button>
                 </li>
                 <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
                   <a>Software</a>
@@ -76,7 +105,7 @@ const Header = () => {
 
           <a className="w-40">
             <Image
-              src={"/images/GlitchTechLogoTransparent.png"}
+              src="/images/GlitchTechLogoTransparent.png"
               width={100}
               height={100}
               loader={ImageLoader}
@@ -88,8 +117,27 @@ const Header = () => {
         {currentWindow.w > 715 && (
           <div className="navbar-center lg:flex">
             <ul className="menu menu-horizontal p-0">
+              <li className="mr-2">
+                <button
+                  className="btn rounded-md bg-black"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    RoutePush("/");
+                  }}
+                >
+                  Home
+                </button>
+              </li>
               <li>
-                <a className="btn rounded-md bg-black">Web</a>
+                <button
+                  className="btn rounded-md bg-black"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    RoutePush("/web-developments");
+                  }}
+                >
+                  Web
+                </button>
               </li>
               <li className="ml-2">
                 <a className="btn rounded-md bg-black">Software</a>
