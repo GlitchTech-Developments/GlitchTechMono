@@ -3,20 +3,14 @@ import Image from "next/image";
 import { GrGithub /* GrLinkedin */ } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import ImageLoader from "../../utils/ImageLoader";
-import Router, { useRouter } from "next/router";
+import NavDropdownItem from "./Navigation/NavDropdownItem";
+import NavItem from "./Navigation/NavItem";
 
 const Header = () => {
-  const localRouter = useRouter();
-
   const [currentWindow, setCurrentWindow] = useState({
     w: 0,
     h: 0,
   });
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any
-  const RoutePush = (url: string) => {
-    Router.push(url);
-  };
 
   useEffect(() => {
     setCurrentWindow({
@@ -64,35 +58,11 @@ const Header = () => {
                 tabIndex={0}
                 className="dropdown-content menu rounded-box menu-compact mt-3 w-52 border-[.1rem] border-glitchtech bg-black p-2 shadow"
               >
-                {localRouter.pathname !== "/" ? (
-                  <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
-                    <button
-                      className="btn rounded-md bg-black"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        RoutePush("/");
-                      }}
-                    >
-                      Home
-                    </button>
-                  </li>
-                ) : (
-                  <></>
-                )}
+                <NavDropdownItem route="/" label="Home" />
                 <li className="menu-title">
                   <span style={{ color: "green" }}>Categories</span>
                 </li>
-                <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
-                  <button
-                    className="btn rounded-md bg-black"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      RoutePush("/web-developments");
-                    }}
-                  >
-                    Web
-                  </button>
-                </li>
+                <NavDropdownItem route="/web-developments" label="Web" />
                 <li className="mt-2 rounded-xl border-[1px] border-stone-900 hover:bg-glitchtech hover:font-bold hover:text-black">
                   <a>Software</a>
                 </li>
@@ -109,6 +79,7 @@ const Header = () => {
               width={100}
               height={100}
               loader={ImageLoader}
+              priority={true}
               alt="GlitchTech Developments Logo"
               className="h-auto w-auto"
             />
@@ -117,34 +88,10 @@ const Header = () => {
         {currentWindow.w > 715 && (
           <div className="navbar-center lg:flex">
             <ul className="menu menu-horizontal p-0">
-              <li className="mr-2">
-                <button
-                  className="btn rounded-md bg-black"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    RoutePush("/");
-                  }}
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button
-                  className="btn rounded-md bg-black"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    RoutePush("/web-developments");
-                  }}
-                >
-                  Web
-                </button>
-              </li>
-              <li className="ml-2">
-                <a className="btn rounded-md bg-black">Software</a>
-              </li>
-              <li className="ml-2">
-                <a className="btn rounded-md bg-black">Games</a>
-              </li>
+              <NavItem route="/" label="Home" />
+              <NavItem route="/web-developments" label="Web" />
+              <NavItem route="/software-developments" label="Software" />
+              <NavItem route="/game-developments" label="Games" />
             </ul>
           </div>
         )}
