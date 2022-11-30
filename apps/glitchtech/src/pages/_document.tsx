@@ -52,7 +52,7 @@ class MyDocument extends Document {
             cardType: "summary_large_image",
           }}
         />
-        <body>
+        <body className="bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-slate-900 via-glitchtech_alt_dark to-slate-900">
           <Main />
           <NextScript />
         </body>

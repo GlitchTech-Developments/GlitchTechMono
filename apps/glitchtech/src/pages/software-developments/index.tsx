@@ -9,7 +9,7 @@ const SoftwareOverview: NextPage = () => {
     <>
       <NextSeo title="Software Developments" />
       <PageWrapper
-        Title="Software Developments"
+        Title="Software"
         Description="Everything Software related that we do"
       >
         <Section>

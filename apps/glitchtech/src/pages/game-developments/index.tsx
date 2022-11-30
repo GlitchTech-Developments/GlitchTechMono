@@ -7,9 +7,9 @@ import Section from "../../components/Partials/Section";
 const Home: NextPage = () => {
   return (
     <>
-      <NextSeo title="Web Developments" />
+      <NextSeo title="Game Developments" />
       <PageWrapper
-        Title="Web Developments"
+        Title="Games"
         Description="Everything web related that we do"
       >
         <Section>

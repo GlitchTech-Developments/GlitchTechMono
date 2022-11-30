@@ -8,10 +8,7 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo title="Web Developments" />
-      <PageWrapper
-        Title="Web Developments"
-        Description="Everything web related that we do"
-      >
+      <PageWrapper Title="Web" Description="Everything web related that we do">
         <Section>
           <h2 className="mx-4 mb-4 pb-2 text-center font-mokoto_glitch_mk1 text-[1.75rem] text-glitchtech">
             Welcome to GlitchTech Web!
