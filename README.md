@@ -5,7 +5,7 @@
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
   <a href="https://github.com/GlitchTech-Developments/GlitchTechMono/actions/workflows/workspace-ci.yml">
-  <img src="https://github.com/GlitchTech-Developments/GlitchTechMono/actions/workflows/workspace-ci.yml/badge.svg?branch=main"/>
+    <img src="https://github.com/GlitchTech-Developments/GlitchTechMono/actions/workflows/workspace-ci.yml/badge.svg?branch=main"/>
   </a>
   <a href="https://twitter.com/GlitchTechEU" target="_blank">
     <img alt="Twitter: GlitchTechEU" src="https://img.shields.io/twitter/follow/GlitchTechEU.svg?style=social" />
