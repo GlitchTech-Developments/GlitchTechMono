@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> TurboRepo used by GlitchTech Developments
+> TurboRepo used by GlitchTech Developments (See domains under Environments)
 
 ## Install
 
