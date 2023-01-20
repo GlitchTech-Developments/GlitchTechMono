@@ -14,5 +14,13 @@ function defineNextConfig(config) {
 
 export default defineNextConfig({
   reactStrictMode: true,
+  compress: true,
   swcMinify: true,
+  compiler: {
+    removeConsole: true,
+  },
+  images: {
+    unoptimized: true,
+    minimumCacheTTL: 3000,
+  },
 })

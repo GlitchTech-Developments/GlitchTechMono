@@ -11,6 +11,7 @@ const App: AppType = ({ Component, pageProps }) => {
     <>
       <Head>
         <Favicons />
+        <meta charSet="UTF-8" />
       </Head>
       <NextSeo
         titleTemplate="%s | HardwareHulp - IT hulp aan huis in Kampen, Overijssel"
