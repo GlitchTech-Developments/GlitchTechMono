@@ -1,5 +1,4 @@
 // @ts-check
-
 /**
  * Don't be scared of the generics here.
  * All they do is to give us autocompletion when using this.
@@ -15,8 +14,13 @@ function defineNextConfig(config) {
 
 export default defineNextConfig({
   reactStrictMode: true,
+  compress: true,
   swcMinify: true,
+  compiler: {
+    removeConsole: true,
+  },
   images: {
+    unoptimized: true,
     minimumCacheTTL: 3000,
     remotePatterns: [
       {
