@@ -1,17 +1,9 @@
 ﻿/* eslint-disable @next/next/no-img-element */
 import Image from "next/image"
-import { useRouter } from "next/router"
 import ImageLoader from "../../utils/ImageLoader"
+import Link from "next/link"
 
 const HomeContent = () => {
-  const router = useRouter()
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const clickRouter = (e: any, link: string) => {
-    e.preventDefault()
-    router.push(link)
-  }
-
   return (
     <>
       <section className="wrapper" style={{ paddingTop: "3rem" }}>
@@ -26,55 +18,75 @@ const HomeContent = () => {
 
           <div className="highlights">
             <section>
-              <div
-                className="content btn-highlights"
-                onClick={(e) => clickRouter(e, "diensten#com-mobile")}
-              >
-                <div>
-                  <a className="icon fa-wrench">
-                    <span className="label">Icon</span>
-                  </a>
-                  <h3>Computer op maat</h3>
-                </div>
-                <p>
-                  Computer speciaal op maat voor uw gebruik. Bij u thuis in
-                  elkaar gezet, geïnstalleerd.
-                </p>
-              </div>
+              <Link href="/diensten#com-mobile" legacyBehavior>
+                <a style={{ textDecoration: "none" }}>
+                  <div className="content btn-highlights">
+                    <span>
+                      <i
+                        className="icon fa-wrench"
+                        style={{ color: "#ffa600" }}
+                      >
+                        <span className="label">Icon</span>
+                      </i>
+                      <h3>Computer op maat</h3>
+                    </span>
+                    <p>
+                      Computer speciaal op maat voor uw gebruik. Bij u thuis in
+                      elkaar gezet, geïnstalleerd.
+                    </p>
+                  </div>
+                </a>
+              </Link>
             </section>
             <section>
-              <div
-                className="content btn-highlights"
-                onClick={(e) => clickRouter(e, "diensten#com-ondersteuning")}
+              <Link
+                style={{ textDecoration: "none" }}
+                href="/diensten#com-ondersteuning"
+                legacyBehavior
               >
-                <div>
-                  <a className="icon fa-life-bouy">
-                    <span className="label">Icon</span>
-                  </a>
-                  <h3>Ondersteuning</h3>
-                </div>
-                <p>
-                  Heeft u problemen met bepaalde apparaten aan de praat krijgen?
-                  dan kan ik u hier ook mee helpen.
-                </p>
-              </div>
+                <a style={{ textDecoration: "none" }}>
+                  <div className="content btn-highlights">
+                    <span>
+                      <i
+                        className="icon fa-life-bouy"
+                        style={{ color: "#ffa600" }}
+                      >
+                        <span className="label">Icon</span>
+                      </i>
+                      <h3>Ondersteuning</h3>
+                    </span>
+                    <p>
+                      Heeft u problemen met bepaalde apparaten aan de praat
+                      krijgen? dan kan ik u hier ook mee helpen.
+                    </p>
+                  </div>
+                </a>
+              </Link>
             </section>
             <section>
-              <div
-                className="content btn-highlights"
-                onClick={(e) => clickRouter(e, "diensten#com-advies")}
+              <Link
+                href="/diensten#com-advies"
+                style={{ textDecoration: "none" }}
+                legacyBehavior
               >
-                <div>
-                  <a className="icon fa-search">
-                    <span className="label">Icon</span>
-                  </a>
-                  <h3>Aankoop advies</h3>
-                </div>
-                <p>
-                  Advisering van de aankoop van elektronica zoals computers,
-                  laptops, smartphones etc.
-                </p>
-              </div>
+                <a style={{ textDecoration: "none" }}>
+                  <div className="content btn-highlights">
+                    <span>
+                      <i
+                        className="icon fa-search"
+                        style={{ color: "#ffa600" }}
+                      >
+                        <span className="label">Icon</span>
+                      </i>
+                      <h3>Aankoop advies</h3>
+                    </span>
+                    <p>
+                      Advisering van de aankoop van elektronica zoals computers,
+                      laptops, smartphones etc.
+                    </p>
+                  </div>
+                </a>
+              </Link>
             </section>
           </div>
         </div>
@@ -136,7 +148,7 @@ const HomeContent = () => {
                   rel="noreferrer"
                   style={{
                     textDecoration: "none",
-                    color: "#ffa600",
+                    color: "#000",
                     fontWeight: "bold",
                   }}
                 >
@@ -173,15 +185,14 @@ const HomeContent = () => {
             afspraak u op het feit dat u mij kunt beoordelen op Trustpilot.
             Hieronder kunt u mijn Trustpilot pagina en beoordeling vinden.
           </p>
-          <div className="NotMobile">
+          <div
+            className="NotMobile"
+            style={{ display: "flex", justifyContent: "center", gap: "2rem" }}
+          >
             <a
               rel="canonical noreferrer"
               href="https://nl.trustpilot.com/review/hardwarehulp.nl"
-              className="button primary"
-              style={{
-                color: "#009565",
-                marginBottom: "20px",
-              }}
+              className="btnTrus"
               target="_blank"
             >
               Bekijk mijn pagina
@@ -189,8 +200,7 @@ const HomeContent = () => {
             <br className="spacer" />
             <a
               href="https://nl.trustpilot.com/evaluate/hardwarehulp.nl"
-              className="button primary"
-              style={{ color: "#009565", marginBottom: "20px" }}
+              className="btnTrus"
               target="_blank"
               rel="noreferrer"
             >

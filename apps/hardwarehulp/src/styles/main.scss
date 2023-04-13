@@ -1044,9 +1044,27 @@ table.alt tbody tr td {
 .highlights .content .icon {
   font-size: 5rem;
 }
-.highlights > div > :last-child {
+.highlights > section:last-child {
   margin-bottom: 0;
 }
+
+.btnTrus {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  text-decoration: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  color: #ffa600 !important;
+}
+
+.btnTrus:hover {
+  border: 1px solid #ffa600;
+  color: #ffa600 !important;
+}
+
 @media screen and (max-width: 980px) {
   .highlights > * {
     width: 50%;

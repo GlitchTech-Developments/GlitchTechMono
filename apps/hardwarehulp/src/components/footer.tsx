@@ -31,7 +31,7 @@
         <div className="inner">
           <div className="content">
             <section>
-              <ul className="plain">
+              <div className="plain">
                 <h3 className="no-select">Hardwarehulp</h3>
                 <p className="no-select">
                   IT hulp aan huis
@@ -57,7 +57,7 @@
                   Tel:
                   <a href="https://wa.me/31642981933"> +31 6 42 98 1933</a>
                 </p>
-              </ul>
+              </div>
             </section>
             <section>
               <h4 className="no-select">Pagina&apos;s</h4>
