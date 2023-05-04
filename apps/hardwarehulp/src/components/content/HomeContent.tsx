@@ -2,6 +2,12 @@
 import Image from "next/image"
 import ImageLoader from "../../utils/ImageLoader"
 import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faLifeRing,
+  faSearch,
+  faWrench,
+} from "@fortawesome/free-solid-svg-icons"
 
 const HomeContent = () => {
   return (
@@ -22,12 +28,11 @@ const HomeContent = () => {
                 <a style={{ textDecoration: "none" }}>
                   <div className="content btn-highlights">
                     <span>
-                      <i
-                        className="icon fa-wrench"
+                      <FontAwesomeIcon
+                        icon={faWrench}
+                        className="icon"
                         style={{ color: "#ffa600" }}
-                      >
-                        <span className="label">Icon</span>
-                      </i>
+                      />
                       <h3>Computer op maat</h3>
                     </span>
                     <p>
@@ -47,12 +52,11 @@ const HomeContent = () => {
                 <a style={{ textDecoration: "none" }}>
                   <div className="content btn-highlights">
                     <span>
-                      <i
-                        className="icon fa-life-bouy"
+                      <FontAwesomeIcon
+                        icon={faLifeRing}
+                        className="icon"
                         style={{ color: "#ffa600" }}
-                      >
-                        <span className="label">Icon</span>
-                      </i>
+                      />
                       <h3>Ondersteuning</h3>
                     </span>
                     <p>
@@ -72,12 +76,11 @@ const HomeContent = () => {
                 <a style={{ textDecoration: "none" }}>
                   <div className="content btn-highlights">
                     <span>
-                      <i
-                        className="icon fa-search"
+                      <FontAwesomeIcon
+                        icon={faSearch}
+                        className="icon"
                         style={{ color: "#ffa600" }}
-                      >
-                        <span className="label">Icon</span>
-                      </i>
+                      />
                       <h3>Aankoop advies</h3>
                     </span>
                     <p>
