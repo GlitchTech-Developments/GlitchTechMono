@@ -1,10 +1,17 @@
-import "../styles/main.scss"
+import "../styles/tailwind.css"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+
 import type { AppType } from "next/dist/shared/lib/utils"
 import { NextSeo } from "next-seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Head from "next/head"
 import Favicons from "../components/favicons"
+
+import { config } from "@fortawesome/fontawesome-svg-core"
+// Tell Font Awesome to skip adding the CSS automatically
+// since it's already imported above
+config.autoAddCss = false
 
 const App: AppType = ({ Component, pageProps }) => {
   return (
