@@ -610,7 +610,7 @@ table tbody tr:nth-child(2n + 1) {
   @apply rounded h-full text-center p-12 [background:#ffffff] shadow-[0px_0px_4px_1px_rgba(0,0,0,0.025)] [background:#ffffff] shadow-[4px_4px_8px_4px_rgba(255,255,255,0.025)] hover:[background:#ffffff] hover:shadow-[4px_4px_8px_4px_rgba(0,149,101,0.125)];
 }
 .highlights .content .icon {
-  @apply text-[5rem];
+  @apply text-[5rem] mb-4;
 }
 .highlights > section:last-child {
   @apply mb-0;
@@ -2078,7 +2078,7 @@ ul.icons li .icon:before {
   @apply mb-0;
 }
 #banner h1 {
-  @apply text-[4rem] mb-4;
+  @apply text-[4rem] mb-4 text-[#ffa600];
 }
 #banner p {
   @apply text-2xl;

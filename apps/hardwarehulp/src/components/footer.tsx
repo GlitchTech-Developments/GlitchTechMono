@@ -1,4 +1,14 @@
-﻿const Footer = () => {
+﻿import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Link from "next/link"
+
+const Footer = () => {
   return (
     <>
       <section className="wrapper no-select">
@@ -8,22 +18,30 @@
             <p>
               Dat snap ik wel. Neem alstublieft contact op als u vragen heeft.
             </p>
-            Whatsapp&nbsp;{" "}
-            <a
-              href="https://wa.me/31642981933"
-              className="icon fa-whatsapp"
-              style={{ fontSize: "35px", paddingRight: "15px" }}
-            >
-              <span className="label">Whatsapp</span>
-            </a>
-            E-mail&nbsp;{" "}
-            <a
-              href="mailto://jesse@hardwarehulp.nl"
-              className="icon fa-envelope-o"
-              style={{ fontSize: "35px", paddingRight: "15px" }}
-            >
-              <span className="label">Mail</span>
-            </a>
+            <div className="w-full flex gap-4 items-center justify-center align-middle">
+              Whatsapp{" "}
+              <a href="https://wa.me/31642981933">
+                <FontAwesomeIcon
+                  icon={faWhatsapp}
+                  className="icon"
+                  style={{
+                    color: "#ffa600",
+                    fontSize: "35px",
+                  }}
+                />
+              </a>
+              E-mail{" "}
+              <a href="mailto://jesse@hardwarehulp.nl">
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="icon"
+                  style={{
+                    color: "#ffa600",
+                    fontSize: "35px",
+                  }}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -61,42 +79,42 @@
             </section>
             <section>
               <h4 className="no-select">Pagina&apos;s</h4>
-              <ul className="alt no-select">
-                <li>
-                  {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-                  <a href="/">Hoofdpagina</a>
-                </li>
-                <li>
-                  <a href="/diensten">Diensten</a>
-                </li>
-                <li>
-                  <a href="/tarieven">Tarieven</a>
-                </li>
-                <li>
-                  <a rel="canonical" href="https://hhhost.nl">
-                    Hosting
-                  </a>
-                </li>
-              </ul>
+              <div className="alt no-select flex flex-col gap-3">
+                <Link href="/">Hoofdpagina</Link>
+                <Link href="/diensten">Diensten</Link>
+                <Link href="/tarieven">Tarieven</Link>
+                <a rel="canonical" href="https://hhhost.nl">
+                  Hosting
+                </a>
+              </div>
             </section>
             <section className="no-select">
               <h4>Volg mij!</h4>
               <ul className="plain no-select">
                 <li>
-                  <a href="https://www.instagram.com/hardwarehulp/">
-                    <i className="icon fa-instagram">&nbsp;</i>
+                  <a
+                    href="https://www.instagram.com/hardwarehulp/"
+                    className="flex items-center"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} className="icon mb-1" />
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/hardwarehulp">
-                    <i className="icon fa-facebook">&nbsp;</i>
+                  <a
+                    href="https://www.facebook.com/hardwarehulp"
+                    className="flex items-center"
+                  >
+                    <FontAwesomeIcon icon={faFacebook} className="icon mb-1" />
                     Facebook
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/hardwarehulp">
-                    <i className="icon fa-linkedin">&nbsp;</i>
+                  <a
+                    href="https://www.linkedin.com/company/hardwarehulp"
+                    className="flex items-center"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} className="icon mb-1" />
                     Linkedin
                   </a>
                 </li>
